@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4f196a98-5f55-4334-b505-9cece6293311" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.js" afterPath="$PROJECT_DIR$/src/Application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LoginForm.js" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/index.js" afterPath="$PROJECT_DIR$/src/components/common/index.js" />
     </list>
     <ignored path="auth-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +61,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView">
-        <subPane />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -85,6 +81,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
