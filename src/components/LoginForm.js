@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet } from 'react-native';
 import firebase from 'firebase';
-import { Button, Card, CardSection, Input } from './common';
+import { Button, Card, CardSection, Input, Spinner } from './common';
 
 export default class LoginForm extends Component {
     constructor() {
@@ -9,29 +9,33 @@ export default class LoginForm extends Component {
         this.state = {
            email: '',
            password: '',
-           error: '' 
+           error: '',
+           loading: false 
         };
     }
     onButtonPress() {
         const { email, password } = this.state;
         this.setState({
-            error: ''
+            error: '',
+            loading: true
         });
         firebase.auth().signInWithEmailAndPassword(email, password)
         .catch(err => {
-           console.log(err);
            this.setState({
-            error: err.message
+            error: err.message,
+            loading: false
            });
            firebase.auth().createUserWithEmailAndPassword(email, password).then(result => {
+               this.setState({
+                   loading: false
+               });
                console.log(result);
            })
            .catch(err => {
-                console.log(err);
                 this.setState({
-                    error: err.message
+                    error: err.message,
+                    loading: false
                 });
-                console.log(this.state.error);  
            });
         });
     }
@@ -46,6 +50,12 @@ export default class LoginForm extends Component {
             password
         });
         console.log(this.state.password);
+    }
+    renderButton() {
+        if (this.state.loading) {
+            return <Spinner size='small' />
+        }
+        else return <Button onPress={this.onButtonPress.bind(this)}>Log in</Button>
     }
     render() {
         return (
@@ -71,7 +81,7 @@ export default class LoginForm extends Component {
                     {this.state.error}
                 </Text>    
                 <CardSection>
-                    <Button onPress={this.onButtonPress.bind(this)}>Log in</Button>
+                    {this.renderButton()}
                 </CardSection>        
             </Card>    
         );

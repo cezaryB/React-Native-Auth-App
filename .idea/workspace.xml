@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1e691daa-f865-4aea-a36a-5cb557d88b1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LoginForm.js" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Spinner.js" afterPath="$PROJECT_DIR$/src/components/common/Spinner.js" />
     </list>
     <ignored path="Auth-App.iws" />
     <ignored path=".idea/workspace.xml" />
