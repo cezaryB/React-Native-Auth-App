@@ -3,13 +3,13 @@
   <component name="FacetManager">
     <facet type="android" name="Android">
       <configuration>
-        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../auth-app/gen" />
-        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../auth-app/gen" />
-        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../auth-app/AndroidManifest.xml" />
-        <option name="RES_FOLDER_RELATIVE_PATH" value="/../../auth-app/res" />
-        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../auth-app/assets" />
-        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/../../auth-app/libs" />
-        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/../../auth-app/proguard_logs" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../Auth-App/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../Auth-App/gen" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../Auth-App/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/../../Auth-App/res" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../Auth-App/assets" />
+        <option name="LIBS_FOLDER_RELATIVE_PATH" value="/../../Auth-App/libs" />
+        <option name="PROGUARD_LOGS_FOLDER_RELATIVE_PATH" value="/../../Auth-App/proguard_logs" />
       </configuration>
     </facet>
   </component>

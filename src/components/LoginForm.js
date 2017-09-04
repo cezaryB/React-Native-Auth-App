@@ -18,12 +18,20 @@ export default class LoginForm extends Component {
             error: ''
         });
         firebase.auth().signInWithEmailAndPassword(email, password)
-        .catch(() => {
-           firebase.auth().createUserWithEmailAndPassword(email, password)
-           .catch(() => {
+        .catch(err => {
+           console.log(err);
+           this.setState({
+            error: 'Authentication Failed'
+           });
+           firebase.auth().createUserWithEmailAndPassword(email, password).then(result => {
+               console.log(result);
+           })
+           .catch(err => {
+                console.log(err);
                 this.setState({
-                    error: 'Authentication Failed'
+                    error: 'Something is wrong'
                 });
+                console.log(this.state.error);  
            });
         });
     }
@@ -37,6 +45,7 @@ export default class LoginForm extends Component {
         this.setState({
             password
         });
+        console.log(this.state.password);
     }
     render() {
         return (
