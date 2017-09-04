@@ -12,6 +12,8 @@ export default class LoginForm extends Component {
            error: '',
            loading: false 
         };
+        this.onLoginSuccess = this.onLoginSuccess.bind(this);
+        this.onLoginFail = this.onLoginFail.bind(this);
     }
     onButtonPress() {
         const { email, password } = this.state;
@@ -20,23 +22,29 @@ export default class LoginForm extends Component {
             loading: true
         });
         firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(this.onLoginSuccess)
         .catch(err => {
-           this.setState({
-            error: err.message,
-            loading: false
-           });
-           firebase.auth().createUserWithEmailAndPassword(email, password).then(result => {
-               this.setState({
-                   loading: false
-               });
-               console.log(result);
-           })
-           .catch(err => {
-                this.setState({
-                    error: err.message,
-                    loading: false
-                });
-           });
+           this.onLoginFail(err); 
+           firebase.auth().createUserWithEmailAndPassword(email, password)
+           .then(this.onLoginSuccess)
+           .catch(this.onLoginFail(err));
+        });
+    }
+    onLoginSuccess() {
+        this.setState({
+            email: '',
+            password: '',
+            loading: false,
+            error: ''
+        });
+        console.log('it works');
+    }
+    onLoginFail(err) {
+        this.setState({
+            email: '',
+            password: '',
+            loading: false,
+            error: err.message
         });
     }
     saveEmail(email) {
