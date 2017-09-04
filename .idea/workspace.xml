@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e691daa-f865-4aea-a36a-5cb557d88b1b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.eslintrc" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/auth-app.iml" afterPath="$PROJECT_DIR$/.idea/auth-app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App.js" afterPath="$PROJECT_DIR$/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.js" afterPath="$PROJECT_DIR$/src/Application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LoginForm.js" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Button.js" afterPath="$PROJECT_DIR$/src/components/common/Button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Card.js" afterPath="$PROJECT_DIR$/src/components/common/Card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/CardSection.js" afterPath="$PROJECT_DIR$/src/components/common/CardSection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Header.js" afterPath="$PROJECT_DIR$/src/components/common/Header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Input.js" afterPath="$PROJECT_DIR$/src/components/common/Input.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Spinner.js" afterPath="$PROJECT_DIR$/src/components/common/Spinner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/index.js" afterPath="$PROJECT_DIR$/src/components/common/index.js" />
     </list>
     <ignored path="Auth-App.iws" />
     <ignored path=".idea/workspace.xml" />

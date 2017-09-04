@@ -21,7 +21,7 @@ export default class LoginForm extends Component {
         .catch(err => {
            console.log(err);
            this.setState({
-            error: 'Authentication Failed'
+            error: err.message
            });
            firebase.auth().createUserWithEmailAndPassword(email, password).then(result => {
                console.log(result);
@@ -29,7 +29,7 @@ export default class LoginForm extends Component {
            .catch(err => {
                 console.log(err);
                 this.setState({
-                    error: 'Something is wrong'
+                    error: err.message
                 });
                 console.log(this.state.error);  
            });
