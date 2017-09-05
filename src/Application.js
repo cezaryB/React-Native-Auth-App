@@ -6,6 +6,12 @@ import LoginForm from './components/LoginForm';
 
 
 export default class Application extends Component {
+    constructor() {
+        super();
+        this.stage = {
+            loggedIn: false
+        }
+    }
     componentWillMount() {
           const config = {
             apiKey: 'AIzaSyCeC95na9WgcwaYqxzzbpXOVUQijPs1jWY',
@@ -16,6 +22,16 @@ export default class Application extends Component {
             messagingSenderId: '330731995281'
             };
             firebase.initializeApp(config);
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    return this.setState({
+                        loggedIn: true,
+                    });
+                }
+                return this.setState({
+                    loggedIn: false
+                });
+            });
     }
     render() {
         return (
