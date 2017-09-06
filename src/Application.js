@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import firebase from 'firebase';
-import { Header } from './components/common';
+import { Header, Button, CardSection, Spinner } from './components/common';
 import LoginForm from './components/LoginForm';
+
 
 
 export default class Application extends Component {
     constructor() {
         super();
-        this.stage = {
-            loggedIn: false
+        this.state = {
+            loggedIn: null
         }
     }
     componentWillMount() {
@@ -33,11 +34,28 @@ export default class Application extends Component {
                 });
             });
     }
+    signOut() {
+        firebase.auth().signOut();
+    }
+    renderContent() {
+        switch (this.state.loggedIn) {
+            case true:
+                return (<CardSection>
+                    <Button onPress={this.signOut.bind(this)}>Log out</Button>
+                </CardSection>);
+            case false:
+                return <LoginForm />;
+            default:
+                return (<CardSection>
+                    <Spinner />
+                </CardSection>);          
+        }
+    }
     render() {
         return (
             <View>
                 <Header title="Auth app" />
-                <LoginForm />
+                {this.renderContent()}
             </View>    
         );
     }

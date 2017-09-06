@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
 
 function Button({ onPress, children }) {
@@ -7,7 +7,7 @@ function Button({ onPress, children }) {
     return (
         <TouchableOpacity onPress={onPress} style={buttonStyle}>
             <Text style={textStyle}>{children}</Text>
-        </TouchableOpacity>    
+        </TouchableOpacity>      
     );
 }
 
